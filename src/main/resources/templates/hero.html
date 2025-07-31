@@ -1,0 +1,32 @@
+<!-- Hero Section -->
+<div class="glass-card">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <!-- Profile Image -->
+        <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 3px solid var(--highlight); margin-bottom: 20px;">
+            <img th:src="@{${profilepic}}" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+
+        <!-- Name -->
+        <h1 style="font-size: 2rem; margin-bottom: 10px; color: var(--highlight);">
+            Hello, I'm <span th:text="${myName}">Rushikesh</span>
+        </h1>
+
+        <!-- Role / Tagline -->
+        <h2 style="font-size: 1.2rem; color: #ccc; margin-bottom: 20px;">
+            <span th:text="${titles}">Content Creator & Java Backend Developer</span>
+        </h2>
+
+        <!-- CV Download Button -->
+        <a th:href="@{${banner}}" target="_blank"
+           style="text-decoration: none; padding: 10px 20px; background-color: var(--highlight); color: black; font-weight: bold; border-radius: 8px; transition: background 0.3s;">
+            Download CV
+        </a>
+
+        <!-- Social Links -->
+        <div style="margin-top: 20px; display: flex; gap: 20px;">
+            <a th:href="@{${linkedin}}" target="_blank" class="fab fa-linkedin" style="color: #00ffd5; font-size: 1.5rem;"></a>
+            <a th:href="@{${github}}" target="_blank" class="fab fa-github" style="color: #00ffd5; font-size: 1.5rem;"></a>
+            <a th:href="'mailto:' + ${email}" class="fas fa-envelope" style="color: #00ffd5; font-size: 1.5rem;"></a>
+        </div>
+    </div>
+</div>
